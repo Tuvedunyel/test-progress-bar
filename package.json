@@ -1,0 +1,24 @@
+{
+  "dependencies": {
+    "sass": "^1.38.0"
+  },
+  "name": "test-progress-bar",
+  "description": "Testing simple and basic progress bar for a client",
+  "version": "1.0.0",
+  "main": "script.js",
+  "devDependencies": {},
+  "scripts": {
+    "sass": "sass --watch style.scss : style.css --style compressed"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tuvedunyel/test-progress-bar.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Tuvedunyel/test-progress-bar/issues"
+  },
+  "homepage": "https://github.com/Tuvedunyel/test-progress-bar#readme"
+}
