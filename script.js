@@ -135,7 +135,7 @@ const app = new Vue({
       return (
         "stroke-dasharray: " +
         this.dashArray +
-        " strokeDashoffset: " +
+        "; strokeDashoffset: " +
         this.dashOffset
       );
     },
