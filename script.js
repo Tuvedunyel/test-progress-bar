@@ -105,7 +105,31 @@
 const app = new Vue({
   data() {
     return {
-      message: "test",
+      sqSize: 200,
+      percentage: 25,
+      strokeWidth: 10,
     };
+  },
+  computed: {
+    viewBox() {
+      return "0 0" + this.sqSize + this.sqSize;
+    },
+    radius() {
+      return (this.sqSize - this.strokeWidth) / 2;
+    },
+    dashOffset() {
+      return this.dashArray - (this.dashArray * this.percentage) / 100;
+    },
+    dashArray() {
+      return this.radius * Math.PI * 2;
+    },
+    rotate() {
+      return (
+        "rotate(-90 " + " " + this.sqSize / 2 + " " + this.sqSize / 2 + ")"
+      );
+    },
+    strokeWidthpx() {
+      return this.strokeWidth + "px";
+    },
   },
 }).$mount("#app");

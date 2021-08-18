@@ -14,7 +14,36 @@
       <div class="container">
         <h1 class="text-center">Simple Circular Progress Bar</h1>
         <div class="text-center" id="app">
-          <h1>{{message}}</h1>
+          <svg
+            v-bind:width="sqSize"
+            v-bind:height="sqSize"
+            v-bind:viewBox="viewBox"
+          >
+            <circle
+              className="circle-background"
+              v-bind:cx="sqSize / 2"
+              v-bind:cy="sqSize / 2"
+              v-bind:r="radius"
+              v-bind:strokeWidth="strokeWidthpx"
+            />
+            <circle
+              className="circle-progress"
+              v-bind:cx="sqSize / 2"
+              v-bind:cy="sqSize / 2"
+              v-bind:r="radius"
+              v-bind:strokeWidth="strokeWidthpx"
+              v-bind:transform="rotate"
+            />
+            <text
+              className="circle-text"
+              x="50%"
+              y="50%"
+              dy=".3em"
+              textAnchor="middle"
+            >
+              {{percentage}}
+            </text>
+          </svg>
         </div>
       </div>
     </main>
