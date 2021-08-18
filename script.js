@@ -131,5 +131,13 @@ const app = new Vue({
     strokeWidthpx() {
       return this.strokeWidth + "px";
     },
+    strokeDashArray() {
+      return (
+        "stroke-dasharray: " +
+        this.dashArray +
+        " strokeDashoffset: " +
+        this.dashOffset
+      );
+    },
   },
 }).$mount("#app");
