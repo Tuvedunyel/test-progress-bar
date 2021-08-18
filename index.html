@@ -9,42 +9,37 @@
     <link rel="stylesheet" href="css/style.css" />
     <title>Progress bar</title>
   </head>
+
   <body>
     <main>
       <div class="container">
         <h1 class="text-center">Simple Circular Progress Bar</h1>
         <div class="text-center" id="app">
-          <svg
-            v-bind:width="sqSize"
-            v-bind:height="sqSize"
-            v-bind:viewBox="viewBox"
-          >
-            <circle
-              class="circle-background"
-              v-bind:cx="sqSize / 2"
-              v-bind:cy="sqSize / 2"
-              v-bind:r="radius"
-              v-bind:strokeWidth="strokeWidthpx"
-            />
-            <circle
-              class="circle-progress"
-              v-bind:cx="sqSize / 2"
-              v-bind:cy="sqSize / 2"
-              v-bind:r="radius"
-              v-bind:strokeWidth="strokeWidthpx"
-              v-bind:transform="rotate"
-              v-bind:style="strokeDashArray"
-            />
-            <text
-              class="circle-text"
-              x="50%"
-              y="50%"
-              dy=".3em"
-              textAnchor="middle"
+          <div class="progress-wrapper">
+            <svg
+              v-bind:width="sqSize"
+              v-bind:height="sqSize"
+              v-bind:viewBox="viewBox"
             >
-              {{percentage}}%
-            </text>
-          </svg>
+              <circle
+                class="circle-background"
+                v-bind:cx="sqSize / 2"
+                v-bind:cy="sqSize / 2"
+                v-bind:r="radius"
+                v-bind:strokeWidth="strokeWidthpx"
+              />
+              <circle
+                class="circle-progress"
+                v-bind:cx="sqSize / 2"
+                v-bind:cy="sqSize / 2"
+                v-bind:r="radius"
+                v-bind:strokeWidth="strokeWidthpx"
+                v-bind:transform="rotate"
+                v-bind:style="strokeDashArray"
+              />
+            </svg>
+            <span class="circle-text">{{percentage}} %</span>
+          </div>
         </div>
       </div>
     </main>

@@ -112,7 +112,7 @@ const app = new Vue({
   },
   computed: {
     viewBox() {
-      return "0 0" + this.sqSize + this.sqSize;
+      return "0 0 " + this.sqSize + " " + this.sqSize;
     },
     radius() {
       return (this.sqSize - this.strokeWidth) / 2;
