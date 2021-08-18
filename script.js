@@ -124,9 +124,7 @@ const app = new Vue({
       return this.radius * Math.PI * 2;
     },
     rotate() {
-      return (
-        "rotate(-90 " + " " + this.sqSize / 2 + " " + this.sqSize / 2 + ")"
-      );
+      return "rotate(-90 " + this.sqSize / 2 + " " + this.sqSize / 2 + ")";
     },
     strokeWidthpx() {
       return this.strokeWidth + "px";

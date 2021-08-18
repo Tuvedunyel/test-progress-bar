@@ -17,8 +17,8 @@
         <div class="text-center" id="app">
           <div class="progress-wrapper">
             <svg
-              v-bind:width="sqSize"
-              v-bind:height="sqSize"
+              v-bind:width="sqSize + 'px'"
+              v-bind:height="sqSize + 'px'"
               v-bind:viewBox="viewBox"
             >
               <circle
@@ -26,14 +26,14 @@
                 v-bind:cx="sqSize / 2"
                 v-bind:cy="sqSize / 2"
                 v-bind:r="radius"
-                v-bind:strokeWidth="strokeWidthpx"
+                v-bind:stroke-width="strokeWidthpx"
               />
               <circle
                 class="circle-progress"
                 v-bind:cx="sqSize / 2"
                 v-bind:cy="sqSize / 2"
                 v-bind:r="radius"
-                v-bind:strokeWidth="strokeWidthpx"
+                v-bind:stroke-width="strokeWidthpx"
                 v-bind:transform="rotate"
                 v-bind:style="strokeDashArray"
               />
