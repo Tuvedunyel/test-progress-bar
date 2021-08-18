@@ -24,14 +24,15 @@
               <circle
                 class="circle-background"
                 v-bind:cx="sqSize / 2"
-                v-bind:cy="sqSize / 2"
+                v-bind:cy="0"
                 v-bind:r="radius"
+                v-bind:transform="rotate"
                 v-bind:stroke-width="strokeWidthpx"
               />
               <circle
                 class="circle-progress"
                 v-bind:cx="sqSize / 2"
-                v-bind:cy="sqSize / 2"
+                v-bind:cy="0"
                 v-bind:r="radius"
                 v-bind:stroke-width="strokeWidthpx"
                 v-bind:transform="rotate"
@@ -40,6 +41,14 @@
             </svg>
             <span class="circle-text">{{percentage}} %</span>
           </div>
+          <input
+            id="progressInput"
+            type="range"
+            min="0"
+            max="100"
+            step="1"
+            v-model="percentage"
+          />
         </div>
       </div>
     </main>
