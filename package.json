@@ -8,7 +8,7 @@
   "main": "script.js",
   "devDependencies": {},
   "scripts": {
-    "sass": "sass --watch style.scss : style.css --style compressed"
+    "sass": "sass --watch scss:css --style compressed"
   },
   "repository": {
     "type": "git",
