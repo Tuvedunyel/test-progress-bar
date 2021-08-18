@@ -102,16 +102,10 @@
 //   document.getElementById('app')
 // );
 
-const progressBar = {
-  name: "Home",
-  template: "#home",
+const app = new Vue({
   data() {
     return {
-      message: "Coucou",
+      message: "test",
     };
   },
-};
-
-const app = new Vue({
-  progressBar,
 }).$mount("#app");
