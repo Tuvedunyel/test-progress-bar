@@ -2,7 +2,7 @@ const app = new Vue({
   data() {
     return {
       sqSize: 200,
-      percentage: 0,
+      percentage: 5,
       strokeWidth: 10,
     };
   },
