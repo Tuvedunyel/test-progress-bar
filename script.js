@@ -3,7 +3,7 @@ const app = new Vue({
     return {
       sqSize: 200,
       percentage: 5,
-      strokeWidth: 10,
+      strokeWidth: 15,
     };
   },
   computed: {
