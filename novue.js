@@ -50,14 +50,3 @@ input.addEventListener("change", (e) => {
   percentage = e.target.value;
   svgGenerator();
 });
-
-// svgContainer.innerHTML = `<svg width="${sqSize}px" height="${sqSize}px" viewBox="${viewBox()}">
-//     <circle class="circle-background" cx="${
-//       sqSize / 2
-//     }" cy="0" r="${radius()}" transform="${rotate()}" stroke-width="${strokeWidthpx()}" />
-//     <circle class="circle-progress" cx="${
-//       sqSize / 2
-//     }" cy="0" r="${radius()}" stroke-width="${strokeWidthpx()}" transform="${rotate()}" style="${strokeDashArray()}" />
-
-// </svg>
-// <span class="circle-text">${percentage}%</span>`;
