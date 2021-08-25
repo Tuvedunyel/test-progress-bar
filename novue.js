@@ -1,6 +1,6 @@
 const svgContainer = document.getElementById("progress-wrap");
 const sqSize = 200;
-let percentage = 0;
+let percentage = 50;
 const strokeWidth = 15;
 
 const viewBox = () => {
