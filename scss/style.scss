@@ -47,3 +47,17 @@ svg {
   position: absolute;
   top: -35%;
 }
+
+.yellow-one {
+  .circle-background {
+    stroke: hsl(14 81% 55% / 0.1);
+  }
+
+  .circle-progress {
+    stroke: hsl(14 81% 55%);
+  }
+
+  .circle-text {
+    color: hsl(14 81% 55% / 0.8);
+  }
+}

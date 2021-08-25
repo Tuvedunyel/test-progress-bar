@@ -1,4 +1,5 @@
 const svgContainer = document.getElementById("progress-wrap");
+const thirdBar = document.getElementById("progress-trois");
 const input = document.getElementById("progressInput");
 class ProgressBar {
   constructor(sqSize, percentage, strokeWidth) {
@@ -53,3 +54,5 @@ input.addEventListener("change", (e) => {
   }
 });
 svgContainer.innerHTML = new ProgressBar(200, 0, 15).svgGenerator();
+
+thirdBar.innerHTML = new ProgressBar(200, 25, 15).svgGenerator();
