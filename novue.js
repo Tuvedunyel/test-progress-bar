@@ -46,7 +46,10 @@ class ProgressBar {
   }
 }
 
-svgContainer.innerHTML = new ProgressBar(200, 15, 15).svgGenerator();
+console.log(input);
+
+svgContainer.innerHTML = new ProgressBar(200, 0, 15).svgGenerator();
+
 // const viewBox = () => {
 //   return `0 0 ${sqSize} ${sqSize}`;
 // };
