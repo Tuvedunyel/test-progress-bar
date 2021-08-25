@@ -3,8 +3,8 @@ const sqSize = 200;
 let percentage = 0;
 const strokeWidth = 15;
 
-const viewbox = () => {
-  return "0 0 " + sqSize + " " + sqSize;
+const viewBox = () => {
+  return `0 0 ${sqSize} ${sqSize}`;
 };
 
 const radius = () => {
@@ -12,7 +12,7 @@ const radius = () => {
 };
 
 const dashArray = () => {
-  return radius * Math.PI * 2;
+  return radius() * Math.PI * 2;
 };
 
 const dashOffset = () => {
@@ -28,12 +28,10 @@ const strokeWidthpx = () => {
 };
 
 const strokeDashArray = () => {
-  return (
-    "stroke-dasharray: " + dashArray() + "; strokeDashoffset: " + dashOffset()
-  );
+  return `stroke-dasharray: ${dashArray()}; strokeDashoffset: ${dashOffset()}`;
 };
 
-svgContainer.innerHTML = `<svg width="${sqSize}px" height="${sqSize}px" viewBox=${viewBox()}>
+svgContainer.innerHTML = `<svg width="${sqSize}px" height="${sqSize}px" viewBox="${viewBox()}">
     <circle class="circle-background" cx="${
       sqSize / 2
     }" cy="0" r="${radius()}" transform="${rotate()}" stroke-width="${strokeWidthpx()}" />
@@ -41,4 +39,5 @@ svgContainer.innerHTML = `<svg width="${sqSize}px" height="${sqSize}px" viewBox=
       sqSize / 2
     }" cy="0" r="${radius()}" stroke-width="${strokeWidthpx()}" transform="${rotate()}" style="${strokeDashArray()}" />
 
-</svg>`;
+</svg>
+<span class="circle-text">${percentage}%</span>`;
