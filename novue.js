@@ -3,7 +3,6 @@ const sqSize = 200;
 let percentage = 0;
 const strokeWidth = 15;
 const input = document.getElementById("progressInput");
-
 const viewBox = () => {
   return `0 0 ${sqSize} ${sqSize}`;
 };
@@ -32,13 +31,33 @@ const strokeDashArray = () => {
   return `stroke-dasharray: ${dashArray()}; stroke-dashoffset: ${dashOffset()}`;
 };
 
-svgContainer.innerHTML = `<svg width="${sqSize}px" height="${sqSize}px" viewBox="${viewBox()}">
-    <circle class="circle-background" cx="${
-      sqSize / 2
-    }" cy="0" r="${radius()}" transform="${rotate()}" stroke-width="${strokeWidthpx()}" />
-    <circle class="circle-progress" cx="${
-      sqSize / 2
-    }" cy="0" r="${radius()}" stroke-width="${strokeWidthpx()}" transform="${rotate()}" style="${strokeDashArray()}" />
+const svgGenerator = () => {
+  return (svgContainer.innerHTML = `<svg width="${sqSize}px" height="${sqSize}px" viewBox="${viewBox()}">
+        <circle class="circle-background" cx="${
+          sqSize / 2
+        }" cy="0" r="${radius()}" transform="${rotate()}" stroke-width="${strokeWidthpx()}" />
+        <circle class="circle-progress" cx="${
+          sqSize / 2
+        }" cy="0" r="${radius()}" stroke-width="${strokeWidthpx()}" transform="${rotate()}" style="${strokeDashArray()}" />
 
-</svg>
-<span class="circle-text">${percentage}%</span>`;
+    </svg>
+    <span class="circle-text">${percentage}%</span>`);
+};
+
+svgGenerator();
+
+input.addEventListener("change", (e) => {
+  percentage = e.target.value;
+  svgGenerator();
+});
+
+// svgContainer.innerHTML = `<svg width="${sqSize}px" height="${sqSize}px" viewBox="${viewBox()}">
+//     <circle class="circle-background" cx="${
+//       sqSize / 2
+//     }" cy="0" r="${radius()}" transform="${rotate()}" stroke-width="${strokeWidthpx()}" />
+//     <circle class="circle-progress" cx="${
+//       sqSize / 2
+//     }" cy="0" r="${radius()}" stroke-width="${strokeWidthpx()}" transform="${rotate()}" style="${strokeDashArray()}" />
+
+// </svg>
+// <span class="circle-text">${percentage}%</span>`;
