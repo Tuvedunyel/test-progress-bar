@@ -1,4 +1,5 @@
 const svgContainer = document.getElementById("progress-wrap");
+const input = document.getElementById("progressInput");
 class ProgressBar {
   constructor(sqSize, percentage, strokeWidth) {
     (this.sqSize = sqSize),
@@ -41,4 +42,12 @@ class ProgressBar {
     <span class="circle-text">${this.percentage}%</span>`;
   }
 }
+
+input.addEventListener("change", (e) => {
+  svgContainer.innerHTML = new ProgressBar(
+    200,
+    e.target.value,
+    15
+  ).svgGenerator();
+});
 svgContainer.innerHTML = new ProgressBar(200, 0, 15).svgGenerator();
