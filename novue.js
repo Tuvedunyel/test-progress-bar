@@ -1,6 +1,6 @@
 const svgContainer = document.getElementById("progress-wrap");
 const sqSize = 200;
-let percentage = 50;
+let percentage = 80;
 const strokeWidth = 15;
 
 const viewBox = () => {
@@ -28,7 +28,7 @@ const strokeWidthpx = () => {
 };
 
 const strokeDashArray = () => {
-  return `stroke-dasharray: ${dashArray()}; strokeDashoffset: ${dashOffset()}`;
+  return `stroke-dasharray: ${dashArray()}; stroke-dashoffset: ${dashOffset()}`;
 };
 
 svgContainer.innerHTML = `<svg width="${sqSize}px" height="${sqSize}px" viewBox="${viewBox()}">
