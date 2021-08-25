@@ -1,5 +1,8 @@
-{
-  /* <svg
+const svgContainer = document.getElementById("progress-wrap");
+
+svgContainer.innerHTML = `<svg width="${sqSize}px" height="${sqSize}px" viewBox=${viewBox}></svg>`;
+
+/* <svg
               v-bind:width="sqSize + 'px'"
               v-bind:height="sqSize + 'px'"
               v-bind:viewBox="viewBox"
@@ -22,4 +25,3 @@
                 v-bind:style="strokeDashArray"
               />
             </svg> */
-}
