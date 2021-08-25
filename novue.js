@@ -44,10 +44,12 @@ class ProgressBar {
 }
 
 input.addEventListener("change", (e) => {
-  svgContainer.innerHTML = new ProgressBar(
-    200,
-    e.target.value,
-    15
-  ).svgGenerator();
+  if (e.target.value <= 100) {
+    svgContainer.innerHTML = new ProgressBar(
+      200,
+      e.target.value,
+      15
+    ).svgGenerator();
+  }
 });
 svgContainer.innerHTML = new ProgressBar(200, 0, 15).svgGenerator();
