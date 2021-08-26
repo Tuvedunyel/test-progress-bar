@@ -4,7 +4,16 @@
 
 #progressInput {
   margin: 20px auto;
-  width: 10%;
+  width: 100%;
+}
+
+.container {
+  max-width: 85%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .progress-wrapper {
