@@ -2,6 +2,11 @@
   margin-top: 40px;
 }
 
+body {
+  background-color: hsl(206 75% 12%);
+  color: white;
+}
+
 #progressInput {
   margin: 20px auto;
   width: 100%;
@@ -50,17 +55,6 @@
   width: -moz-fit-content;
   height: fit-content;
   height: -moz-fit-content;
-  text-shadow: 0.025em 0.025em 0 blue, 0.05em 0.05em 0 yellow,
-    0.075em 0.075em 0 red, 0.1em 0.1em 0 black;
-  background-image: linear-gradient(90deg, red, blue);
-  background-size: 0% 3px;
-  background-repeat: no-repeat;
-  background-position: left bottom;
-  transition: background-size 300ms ease;
-
-  &:hover {
-    background-size: 100% 3px;
-  }
 }
 
 svg {
@@ -79,5 +73,33 @@ svg {
 
   .circle-text {
     color: hsl(14deg 81% 55% / 0.8);
+  }
+}
+
+.text-padding-container {
+  padding-block: 10rem;
+  h2 {
+    font-size: 3rem;
+  }
+
+  p {
+    font-size: 1.6rem;
+    font-weight: 400;
+
+    strong {
+      font-weight: 600;
+      color: hsl(280 42% 52%);
+      text-shadow: 0.025em 0.025em 0 blue, 0.05em 0.05em 0 yellow,
+        0.075em 0.075em 0 red, 0.1em 0.1em 0 black;
+      background-image: linear-gradient(90deg, red, blue);
+      background-size: 0% 3px;
+      background-repeat: no-repeat;
+      background-position: left bottom;
+      transition: background-size 300ms ease;
+
+      &:hover {
+        background-size: 100% 3px;
+      }
+    }
   }
 }
