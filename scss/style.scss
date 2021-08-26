@@ -77,7 +77,7 @@ svg {
 }
 
 .text-padding-container {
-  padding-block: 10rem;
+  padding-block: min(20vh, 10rem);
   h2 {
     font-size: 3rem;
   }
